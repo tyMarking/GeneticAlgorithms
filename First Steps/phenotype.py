@@ -7,11 +7,11 @@ Created on Sun Dec 31 18:12:26 2017
 """
 import random
 
-globalItems = [(4,12),(2,2),(2,1),(1,1),(10,4)]
+globalItems = [(4,12),(2,2),(2,1),(1,1),(10,4),(10000,1)]
 
 class KnapsackPhenotype(object):
     
-    itemsIn = [0,0,0,0,0]
+    itemsIn = [0]*len(globalItems)
     weight = 0
     value = 0
     
@@ -29,4 +29,4 @@ class KnapsackPhenotype(object):
         newItems = []
         for i in range(len(globalItems)):
             newItems.append(random.randint(0,1))
-        return cls(newItems)
+        return KnapsackPhenotype(newItems)

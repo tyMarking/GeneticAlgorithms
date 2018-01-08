@@ -13,11 +13,11 @@ def triCross(parents, popSize):
     for i in range(popSize):
         par1 = random.choice(parents)
         par2 = random.choice(parents)
-        par1 = random.choice(parents)
+        par3 = random.choice(parents)
         
         newItems = []
-        for j in range(len(par1.itemsIn)):
-            itemSum = par1.itemsIn[j] + par1.itemsIn[j] + par1.itemsIn[j]
+        for j in range(len(par1[0].itemsIn)):
+            itemSum = par1[0].itemsIn[j] + par2[0].itemsIn[j] + par3[0].itemsIn[j]
             if itemSum >= 2:
                 newItems.append(1)
             else:
