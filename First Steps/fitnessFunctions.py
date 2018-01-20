@@ -7,7 +7,7 @@ Created on Sun Dec 31 18:12:47 2017
 """
 import phenotype
 #max weight
-maxWeight = 15
+maxWeight = 750
 
 def knapsackFitness(phenotypes):
     ret = []
@@ -26,6 +26,6 @@ phenos.append(phenotype.KnapsackPhenotype([0,1,1,1,0]))
 phenos.append(phenotype.KnapsackPhenotype([0,0,1,0,0]))
 phenos.append(phenotype.KnapsackPhenotype([1,1,1,1,1]))
 
-print("hi")
-print(knapsackFitness(phenos))
+#print("hi")
+#print(knapsackFitness(phenos))
     

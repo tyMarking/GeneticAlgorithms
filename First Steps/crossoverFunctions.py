@@ -10,7 +10,9 @@ import phenotype
 
 def triCross(parents, popSize):
     children = []
-    for i in range(popSize):
+    for i in range(3):
+        children.append(parents[i][0])
+    for i in range(popSize-3):
         par1 = random.choice(parents)
         par2 = random.choice(parents)
         par3 = random.choice(parents)
