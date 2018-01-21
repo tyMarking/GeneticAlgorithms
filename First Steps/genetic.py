@@ -19,18 +19,9 @@ def evolve(popSize, generations, Phenotype, fitnessF, selectionF, standardDiv, c
     valAtPop = []
     for i in range(popSize):
         pop.append(Phenotype.getRandomPhenotype())
-#        pop.append(phenotype.KnapsackPhenotype([0,1,1,1,1]))
-#        pop.append(phenotype.KnapsackPhenotype([0,1,1,1,0]))
-#        pop.append(phenotype.KnapsackPhenotype([0,0,1,0,0]))
-#        pop.append(phenotype.KnapsackPhenotype([1,1,1,1,1]))
-        
-    #print(pop)
-    #print("Hello")
     
     popWValue = fitnessF(pop)
     
-    #for pheno in popWValue:
-        #print(str(pheno[1]) + " : " + str(pheno[0].itemsIn))
     
     #loop
     for g in range(generations):
@@ -52,29 +43,8 @@ def evolve(popSize, generations, Phenotype, fitnessF, selectionF, standardDiv, c
         
     popWValue = fitnessF(pop)
     valAtPop.append(popWValue[0][1])
-    #for pheno in popWValue:
-        #print(str(pheno[1]) + " : " + str(pheno[0].itemsIn))
-    
-    #print(popWValue[0][1])
-    #print(str(popWValue[0][1]) + " : " + str(popWValue[0][0].itemsIn))
     return valAtPop
-#evolve(1000, 1000, phenotype.KnapsackPhenotype, fitnessFunctions.knapsackFitness, selectionFunctions.gradiant25, crossoverFunctions.triCross, mutators.probMutate, 0.10 )
 
-#mutates = [.001, .005, .01, .02, .03, .04, .05, .06, .07, .08, .09, .10, .11, .12, .13, .14, .15, .16, .17, .18, .19, .2]
-#selectors = [selectionFunctions.top6, selectionFunctions.top6th, selectionFunctions.gradiant25]
-standardDivs = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]
-vals = []
-gens = [100,200,300,400,500,600,700,800,900,1000]
-counter = 0
-"""for gen in gens:
-    testVals = []
-    for i in range(10):
-        testVals.append(evolve(1000, gen, phenotype.KnapsackPhenotype, fitnessFunctions.knapsackFitness, selectionFunctions.gradiant25, 400, crossoverFunctions.triCross, mutators.probMutate, 0.17 ))
-        counter += 1
-        print(str(counter) +"% done")
-    vals.append(sum(testVals)/len(testVals))
-    print("Gen " + str(gen) + " Complete")
-    """
 vals = []
 mins = []
 maxes = []
